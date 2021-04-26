@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
-    <data>
+    <data noupdate="1">
         <record model="volunteer.task" id="task_1">
             <field name="name">Picking up trash</field>
-            <field name="startTime">2021-05-01 9:00</field>
-            <field name="endTime">2021-05-01 11:00</field>
+            <field name="startTime">2021-05-01 09:00:00</field>
+            <field name="endTime">2021-05-01 11:00:00</field>
         </record>
         <record model="volunteer.task" id="task_2">
             <field name="name">Helping old people</field>
-            <field name="startTime">2021-05-01 11:00</field>
-            <field name="endTime">2021-05-01 13:00</field>
+            <field name="startTime">2021-05-01 11:00:00</field>
+            <field name="endTime">2021-05-01 13:00:00</field>
         </record>        
         <record model="volunteer.task" id="task_1">
             <field name="name">Tutoring underprivileged kids</field>
-            <field name="startTime">2021-05-01 13:00</field>
-            <field name="endTime">2021-05-01 17:00</field>
+            <field name="startTime">2021-05-01 13:00:00</field>
+            <field name="endTime">2021-05-01 17:00:00</field>
         </record>
     </data>
 </odoo>
