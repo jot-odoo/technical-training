@@ -15,3 +15,4 @@ class Book(models.Model):
     isbn = fields.Char(string='ISBN')
     genre = fields.Selection(string='Genre', selection=[
         ('horror', 'Horror'), ('scifi', 'Science Fiction'), ('fantasy', 'Fantasy'), ('romance', 'Romance')]) # many2many
+    note = fields.Text(string='Notes')

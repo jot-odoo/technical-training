@@ -7,6 +7,7 @@ class Spaceship(models.Model):
     _name = 'space.spaceship'
     _description = 'Spaceship Info'
 
+    name = fields.Char(string="name")
     shipType = fields.Selection(string='Type', selection=[
         ('shuttle', 'Shuttle'), ('rocket', 'Rocket'), ('cargo', 'Cargo')])
     numPassengers = fields.Integer(string='Number of Passengers')

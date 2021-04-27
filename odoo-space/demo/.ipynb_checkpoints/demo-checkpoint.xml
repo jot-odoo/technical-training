@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <record model="space.spaceship" id="ship_1">
+            <field name="name">Bahamut</field>
             <field name="shipType">shuttle</field>
             <field name="numPassengers">10</field>
             <field name="active">True</field>
         </record>
         <record model="space.spaceship" id="ship_2">
+            <field name="name">Leviathan</field>
             <field name="shipType">shuttle</field>
             <field name="numPassengers">2</field>
             <field name="active">True</field>
         </record>
         <record model="space.spaceship" id="ship_3">
+            <field name="name">Tiamat</field>
             <field name="shipType">cargo</field>
             <field name="numPassengers">8</field>
             <field name="active">True</field>
