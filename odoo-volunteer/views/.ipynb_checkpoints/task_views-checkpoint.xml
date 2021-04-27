@@ -8,6 +8,10 @@
                   <sheet>
                       <h1><field name="name"/></h1>
                       <h2><field name="startTime"/> - <field name="endTime"/></h2>
+                      <group>
+                          <field name="leader"/>
+                          <field name="state"/>                      
+                      </group>
                       <notebook>
                           <page string="Description">
                               <field name="description"/>

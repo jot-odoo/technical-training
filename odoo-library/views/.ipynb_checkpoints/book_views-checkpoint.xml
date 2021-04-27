@@ -15,6 +15,7 @@
                           <group>
                               <field name="publisher"/>
                               <field name="publicationYear"/>
+                              <field name="isbn"/>
                           </group>
                       </group>
                       <notebook>

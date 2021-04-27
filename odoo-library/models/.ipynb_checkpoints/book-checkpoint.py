@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-
+from odoo.exceptions import ValidationError
 
 class Book(models.Model):
     _name = 'library.book'
@@ -16,3 +16,8 @@ class Book(models.Model):
     genre = fields.Selection(string='Genre', selection=[
         ('horror', 'Horror'), ('scifi', 'Science Fiction'), ('fantasy', 'Fantasy'), ('romance', 'Romance')]) # many2many
     note = fields.Text(string='Notes')
+    
+    @api.onchange('isbn')
+    def _onchange_isbn(self):
+        if(len(self.isbn) != 13):
+            raise ValidationError(f'The ISBN must be 13 characters long! Yours is too {"short" if len(self.isbn) < 13 else "long"}!')

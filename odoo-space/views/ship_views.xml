@@ -15,9 +15,9 @@
                           </group>
                           <group>
                               <h2>Dimensions</h2>
-                              <field name="dimensionsLength" />
-                              <field name="dimensionsHeight" />
-                              <field name="dimensionsWidth" />
+                              <field name="length" />
+                              <field name="height" />
+                              <field name="width" />
                           </group>
                       </group>
                   </sheet>

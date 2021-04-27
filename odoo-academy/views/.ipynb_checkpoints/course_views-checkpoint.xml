@@ -10,9 +10,13 @@
                       <group>
                           <group>
                               <field name="active"/>
+                                <field name="level"/>
                           </group>
                           <group>
-                              <field name="level"/>
+                              <h5>Prices</h5>
+                              <field name="base_price"/>
+                              <field name="additional_fee"/>
+                              <field name="total_price" force_save="1"/>
                           </group>
                       </group>
                       <notebook>

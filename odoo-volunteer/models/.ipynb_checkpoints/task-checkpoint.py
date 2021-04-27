@@ -18,3 +18,11 @@ class Task(models.Model):
     frequency = fields.Integer(string='Frequency')
     frequencyUnits = fields.Selection(string='Frequency Units', selection=[
                                       ('day', 'Day'), ('week', 'Week'), ('month', 'Month')])
+    
+    leader = fields.Char(string='Leader')
+    state = fields.Selection(string='State', selection=[('draft','Draft'),('ready','Ready'),('inprogress','In-progress'),('done','Done')])
+    
+    @api.onchange('leader')
+    def _onchange_leader(self):
+        if(self.state == 'draft' and self.leader != ''): 
+            self.state = 'ready'
