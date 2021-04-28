@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+      <record model="ir.ui.view" id="task_view_form">
+          <field name="name">volunteer.task.form</field>
+          <field name="model">volunteer.task</field>
+          <field name="arch" type="xml">
+              <form string="task Form">
+                  <sheet>
+                      <h1><field name="name"/></h1>
+                      <h2><field name="startTime"/> - <field name="endTime"/></h2>
+                      <group>
+                          <field name="leader_id"/>
+                          <field name="state"/>                      
+                      </group>
+                      <notebook>
+                          <page string="Description">
+                              <field name="description"/>
+                          </page>
+                          <page string="Volunteers">
+                              <field name="volunteer_ids"/>
+                          </page>
+                      </notebook>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+      <record model="ir.ui.view" id="task_view_list">
+          <field name="name">volunteer.task.list</field>
+          <field name="model">volunteer.task</field>
+          <field name="arch" type="xml">
+              <tree string="task List">
+                  <field name="name"/>
+                  <field name="taskType"/>
+              </tree>
+          </field>
+      </record>
+      <record model="ir.ui.view" id="task_view_search">
+          <field name="name">volunteer.task.search</field>
+          <field name="model">volunteer.task</field>
+          <field name="arch" type="xml">
+              <search>
+                  <field name="name"/>
+                  <field name="description"/>
+              </search>
+          </field>
+      </record>
+  </data>
+</odoo>
