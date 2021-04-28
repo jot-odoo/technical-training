@@ -19,10 +19,12 @@ class Task(models.Model):
     frequencyUnits = fields.Selection(string='Frequency Units', selection=[
                                       ('day', 'Day'), ('week', 'Week'), ('month', 'Month')])
     
-    leader = fields.Char(string='Leader')
-    state = fields.Selection(string='State', selection=[('draft','Draft'),('ready','Ready'),('inprogress','In-progress'),('done','Done')])
+    leader_id = fields.Many2one(string='Leader', comodel_name='res.partner')
+    state = fields.Selection(string='State', selection=[('draft','Draft'),('ready','Ready'),('inprogress','In-progress'),('done','Done')], default='draft')
     
-    @api.onchange('leader')
+    volunteer_ids = fields.Many2many(string='Volunteers', comodel_name='res.partner')
+    
+    @api.onchange('leader_id')
     def _onchange_leader(self):
-        if(self.state == 'draft' and self.leader != ''): 
+        if(self.state == 'draft' and self.leader_id): 
             self.state = 'ready'

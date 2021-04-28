@@ -18,6 +18,10 @@ class Spaceship(models.Model):
     height = fields.Float(string='Height')
     active = fields.Boolean(string='Active', default=False)
 
+    mission_ids = fields.One2many(comodel_name = 'space.mission',
+                                 inverse_name = 'ship_id',
+                                 string = 'Missions')
+    
     @api.constrains('length', 'width')
     def _check_dimensions(self):
         for record in self:

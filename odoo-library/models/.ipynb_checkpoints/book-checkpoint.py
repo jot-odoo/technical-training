@@ -12,10 +12,12 @@ class Book(models.Model):
     editors = fields.Char(string='Editors') # many2many
     publisher = fields.Char(string='Publisher') # many2one
     publicationYear = fields.Integer(string='Publication Year')
-    isbn = fields.Char(string='ISBN')
+    isbn = fields.Char(string='ISBN', default='0000000000000')
     genre = fields.Selection(string='Genre', selection=[
         ('horror', 'Horror'), ('scifi', 'Science Fiction'), ('fantasy', 'Fantasy'), ('romance', 'Romance')]) # many2many
     note = fields.Text(string='Notes')
+    
+#     rental_id = fields.Many2many(comodel_name='library.rental', string='Rental')
     
     @api.onchange('isbn')
     def _onchange_isbn(self):

@@ -9,12 +9,15 @@
                       <h1><field name="name"/></h1>
                       <h2><field name="startTime"/> - <field name="endTime"/></h2>
                       <group>
-                          <field name="leader"/>
+                          <field name="leader_id"/>
                           <field name="state"/>                      
                       </group>
                       <notebook>
                           <page string="Description">
                               <field name="description"/>
+                          </page>
+                          <page string="Volunteers">
+                              <field name="volunteer_ids"/>
                           </page>
                       </notebook>
                   </sheet>

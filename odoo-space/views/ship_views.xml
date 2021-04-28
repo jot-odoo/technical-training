@@ -20,12 +20,17 @@
                               <field name="width" />
                           </group>
                       </group>
+                    <notebook>
+                          <page string="Missions">
+                              <field name="mission_ids"/>
+                          </page>
+                      </notebook>
                   </sheet>
               </form>
           </field>
       </record>
       <record model="ir.ui.view" id="ship_view_list">
-          <field name="name">space.ship.form</field>
+          <field name="name">space.ship.list</field>
           <field name="model">space.spaceship</field>
           <field name="arch" type="xml">
               <tree string="Spaceship List">

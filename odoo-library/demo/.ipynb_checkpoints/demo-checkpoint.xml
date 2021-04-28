@@ -5,26 +5,32 @@
         <record model="library.book" id="jade_city_1" >
             <field name="name">Jade City</field>
             <field name="authors">Fonda Lee</field>
+            <field name="isbn">1234567890123</field>
         </record>
         <record model="library.book" id="jade_city_2">
             <field name="name">Jade War</field>
             <field name="authors">Fonda Lee</field>
             <field name="genre">fantasy</field>
+            <field name="isbn">1234567890123</field>
         </record>          
         <record model="library.book" id="priory">
             <field name="name">The Priory of the Orange Tree</field>
             <field name="authors">Samantha Shannon</field>
             <field name="genre">fantasy</field>
+            <field name="isbn">1234567890123</field>
         </record>          
         <record model="library.book" id="cerulean">
             <field name="name">The House in the Cerulean Sea</field>
             <field name="authors">TJ Klune</field>
             <field name="genre">fantasy</field>
+            <field name="isbn">1234567890123</field>
+
         </record>          
         <record model="library.book" id="frankenstein">
             <field name="name">Frankenstein</field>
             <field name="authors">Mary Shelley</field>
             <field name="genre">horror</field>
+            <field name="isbn">1234567890123</field>
         </record>
     </data>
 </odoo>

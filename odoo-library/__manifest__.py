@@ -26,6 +26,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/menuitems.xml',
+        'views/rental_views.xml',
         'views/book_views.xml',
         'views/templates.xml',
     ],

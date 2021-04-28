@@ -30,6 +30,7 @@
         'security/ir.model.access.csv',
         'views/menuitems.xml',
         'views/course_views.xml',
+        'views/session_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
