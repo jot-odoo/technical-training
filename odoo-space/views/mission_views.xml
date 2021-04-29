@@ -1,41 +1,57 @@
 <odoo>
-  <data>
-      <record model="ir.ui.view" id="ship_view_form">
-          <field name="name">space.mission.form</field>
-          <field name="model">space.mission</field>
-          <field name="arch" type="xml">
-              <form string="Mission Form">
-                  <sheet>
-                      <h1><field name="name" /></h1>
-                      <group>
-                          <group>
-                              <field name="ship_id"/>
-                          </group>
-                          <group>
-                              <field name="launchDate" />
-                              <field name="returnDate" />
-                          </group>
-                      </group>
-                      <notebook>
-                          <page string="Crew">
-                              <field name="crew_ids"/>
-                          </page>
-                      </notebook>
-                  </sheet>
-              </form>
-          </field>
-      </record>
-      <record model="ir.ui.view" id="ship_view_list">
-          <field name="name">space.mission.list</field>
-          <field name="model">space.mission</field>
-          <field name="arch" type="xml">
-              <tree string="Mission List">
-                  <field name="name"/>
-                  <field name="ship_id"/>
+    <data>
+        <record model="ir.ui.view" id="ship_view_form">
+            <field name="name">space.mission.form</field>
+            <field name="model">space.mission</field>
+            <field name="arch" type="xml">
+                <form string="Mission Form">
+                    <sheet>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="ship_id" />
+                                <field name="launchDate" />
+                                <field name="returnDate" />
+                            </group>
+                            <group>
+                                <field name="fuelUsed" />
+                                <field name="numberOfEngines" />
+                                <field name="distanceTraveled" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Crew">
+                                <field name="crew_ids" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="ship_view_list">
+            <field name="name">space.mission.list</field>
+            <field name="model">space.mission</field>
+            <field name="arch" type="xml">
+                <tree string="Mission List">
+                    <field name="name" />
+                    <field name="ship_id" />
                     <field name="launchDate" />
                     <field name="returnDate" />
-              </tree>
-          </field>
-    </record>
-  </data>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="ship_view_graph">
+            <field name="name">space.mission.graph</field>
+            <field name="model">space.mission</field>
+            <field name="arch" type="xml">
+                <graph string="Mission Graph" type="bar">
+                    <field name="fuelUsed" />
+                    <field name="numberOfEngines" />
+                    <field name="distanceTraveled" />
+                </graph>
+            </field>
+        </record>
+    </data>
 </odoo>

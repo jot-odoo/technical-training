@@ -12,21 +12,21 @@
                 </p>
             </field>
         </record>
-        
+
         <record model="ir.actions.act_window" id="missions_list_action">
             <field name="name">Missions</field>
             <field name="res_model">space.mission</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,graph</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create the first mission.
                 </p>
             </field>
         </record>
-        
-        <menuitem name="Odoo Space Mission" id="menu_space" sequence="1"/> 
-        <menuitem name="Space Mission" id="menu_space_sub" parent="menu_space" sequence="2"/>
-        <menuitem name="Spaceships" id="menu_space_ships" parent="menu_space_sub" sequence="3" action="ships_list_action"/>
-        <menuitem name="Missions" id="menu_space_missions" parent="menu_space_sub" sequence="4" action="missions_list_action"/>
+
+        <menuitem name="Odoo Space Mission" id="menu_space" sequence="1" />
+        <menuitem name="Space Mission" id="menu_space_sub" parent="menu_space" sequence="2" />
+        <menuitem name="Spaceships" id="menu_space_ships" parent="menu_space_sub" sequence="3" action="ships_list_action" />
+        <menuitem name="Missions" id="menu_space_missions" parent="menu_space_sub" sequence="4" action="missions_list_action" />
     </data>
 </odoo>
