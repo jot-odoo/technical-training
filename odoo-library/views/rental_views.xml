@@ -1,29 +1,41 @@
 <odoo>
-  <data>
-      <record model="ir.ui.view" id="rental_view_form">
-          <field name="name">library.rental.form</field>
-          <field name="model">library.rental</field>
-          <field name="arch" type="xml">
-              <form string="Rental Form">
-                  <sheet>
-                      <h1><field name="customer_id"/></h1>
-                      <notebook>
-                          <page string="Books">
-                              <field name="book_ids"/>
-                          </page>
-                      </notebook>
-                  </sheet>
-              </form>
-          </field>
-      </record>
-      <record model="ir.ui.view" id="rental_view_list">
-          <field name="name">library.rental.list</field>
-          <field name="model">library.rental</field>
-          <field name="arch" type="xml">
-              <tree string="Rental List">
-                  <field name="customer_id"/>
-              </tree>
-          </field>
-      </record>
-  </data>
+    <data>
+        <record model="ir.ui.view" id="rental_view_form">
+            <field name="name">library.rental.form</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <form string="Rental Form">
+                    <sheet>
+                        <h1>
+                            <field name="customer_id" />
+                        </h1>
+                        <notebook>
+                            <page string="Books">
+                                <field name="book_ids" />
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="rental_view_list">
+            <field name="name">library.rental.list</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <tree string="Rental List">
+                    <field name="customer_id" />
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="rental_view_map">
+            <field name="name">library.rental.map</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_id">
+                    <field name="customer_id" string="Customer" />
+                    <field name="book_ids" string="Books" />
+                </map>
+            </field>
+        </record>
+    </data>
 </odoo>
