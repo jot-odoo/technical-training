@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record model='library.genre' id='genre_fantasy'>
+            <field name='name'>Fantasy</field>
+        </record>
+        <record model='library.genre' id='genre_scifi'>
+            <field name='name'>Science Fiction</field>
+        </record>
+        <record model='library.genre' id='genre_romance'>
+            <field name='name'>Romance</field>
+        </record>
+        <record model='library.genre' id='genre_mystery'>
+            <field name='name'>Mystery</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <record model='library.tag' id='tag_action'>
+            <field name='name'>action</field>
+        </record>
+        <record model='library.tag' id='tag_lgbtq'>
+            <field name='name'>LGBTQ+</field>
+        </record>
+        <record model='library.tag' id='tag_monsters'>
+            <field name='name'>monsters</field>
+        </record>
+        <record model='library.tag' id='tag_feelgood'>
+            <field name='name'>feel good</field>
+        </record>
+        <record model='library.tag' id='tag_magic'>
+            <field name='name'>magic</field>
+        </record>
+    </data>
+</odoo>
