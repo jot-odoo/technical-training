@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- library.rental tree view -->
+        <record id="library_rental_view_tree" model="ir.ui.view">
+            <field name="name">library.rental.view.tree</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="customer_id" />
+                    <field name="book_id" />
+                    <field name="start_date" />
+                    <field name="due_date" />
+                    <field name="is_returned" />
+                </tree>
+            </field>
+        </record>
+        <!-- library.rental form view -->
+        <record id="library_rental_view_form" model="ir.ui.view">
+            <field name="name">library.rental.view.form</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="customer_id" />
+                                <field name="book_id" options="{'no_create':True,'no_create_edit':True, 'no_open':True}" domain="[('is_available','=',True)]" />
+                            </group>
+                            <group>
+                                <field name="start_date" />
+                                <field name="duration" />
+                                <field name="due_date" />
+                                <field name="is_returned" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- library.rental map view -->
+        <record id="library_rental_view_map" model="ir.ui.view">
+            <field name="name">library.rental.view.map</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_id">
+                    <field name="customer_id" string="Customer" />
+                    <field name="book_id" string="Book" />
+                </map>
+            </field>
+        </record>
+        <!-- library.rental gantt view -->
+        <record id="library_rental_view_gantt" model="ir.ui.view">
+            <field name="name">library.rental.view.gantt</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <gantt string="Gantt" date_start="start_date" date_stop="due_date" default_group_by="customer_id" />
+            </field>
+        </record>
+    </data>
+</odoo>
