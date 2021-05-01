@@ -5,7 +5,8 @@
     'summary':"""
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
-    'description':"""
+    'description':
+    """
         Long description of module's purpose
     """,
     'author':"My Company",
@@ -18,18 +19,21 @@
     'version':'0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','web_map'],
 
     # always loaded
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv'
-
+        'security/security.xml', 
+        'security/ir.model.access.csv',
+        'views/menu_items.xml', 
+        'views/book_views.xml',
+        'views/rental_views.xml',
+        'views/copy_views.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [        
-        'demo/publishers.xml',
-        'demo/authors.xml',
+    'demo': [
+        'demo/publishers.xml', 
+        'demo/authors.xml', 
         'demo/genres_tags.xml',
         'demo/books.xml'
     ],

@@ -6,6 +6,7 @@ from odoo import api, fields, models
 class Book(models.Model):
     _name = 'library.book'
     _description = 'Book Info'
+    _rec_name = 'title'
 
     title = fields.Char(string='Title', required=True)
     author_ids = fields.Many2many(string='Author',
@@ -18,3 +19,8 @@ class Book(models.Model):
     tag_ids = fields.Many2many(string='Tags', comodel_name='library.tag')
     isbn = fields.Char(string='ISBN-13')
     cover = fields.Image(string='Cover')
+    description = fields.Text(string='Description')
+
+    copy_ids = fields.One2many(string='Copies',
+                               comodel_name='library.copy',
+                               inverse_name='book_id')

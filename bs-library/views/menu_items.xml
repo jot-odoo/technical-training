@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- library.book action window -->
+        <record id="library_book_action" model="ir.actions.act_window">
+            <field name="name">Books</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">library.book</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create your first book.
+                </p>
+            </field>
+        </record>
+        <!-- library.rental action window -->
+        <record id="library_rental_action" model="ir.actions.act_window">
+            <field name="name">Rentals</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">library.rental</field>
+            <field name="view_mode">tree,form,map,gantt</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Add a new rental here!
+                </p>
+            </field>
+        </record>
+        <!-- library.copy action window -->
+        <record id="library_copy_action" model="ir.actions.act_window">
+            <field name="name">Inventory</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">library.copy</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create your first book.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="library_menu_root" name="Library" sequence="1" />
+        <menuitem id="library_menu_categ" name="Library" parent="library_menu_root" sequence="2" />
+        <menuitem id="library_book_menu_act" name="Books" parent="library_menu_categ" action="library_book_action" sequence="3" />
+        <menuitem id="library_rental_menu_act" name="Rentals" parent="library_menu_categ" action="library_rental_action" sequence="4" />
+        <menuitem id="management_menu_categ" name="Management" parent="library_menu_root" sequence="5" />
+        <menuitem id="copies_menu_act" name="Book Copies" parent="management_menu_categ" action="library_copy_action" sequence="6" />
+    </data>
+</odoo>

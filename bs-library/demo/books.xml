@@ -28,22 +28,22 @@
         </record>
     </data>
     <data noupdate="1">
-        <record model='library.bookcopy' id='way_of_kings_copy_1'>
+        <record model='library.copy' id='way_of_kings_copy_1'>
             <field name='book_id' ref='way_of_kings' />
         </record>
-        <record model='library.bookcopy' id='way_of_kings_copy_2'>
+        <record model='library.copy' id='way_of_kings_copy_2'>
             <field name='book_id' ref='way_of_kings' />
         </record>
-        <record model='library.bookcopy' id='way_of_kings_copy_3'>
+        <record model='library.copy' id='way_of_kings_copy_3'>
             <field name='book_id' ref='way_of_kings' />
         </record>
-        <record model='library.bookcopy' id='jade_city_copy_1'>
+        <record model='library.copy' id='jade_city_copy_1'>
             <field name='book_id' ref='jade_city' />
         </record>
-        <record model='library.bookcopy' id='jade_city_copy_2'>
+        <record model='library.copy' id='jade_city_copy_2'>
             <field name='book_id' ref='jade_city' />
         </record>
-        <record model='library.bookcopy' id='jade_war_copy_1'>
+        <record model='library.copy' id='jade_war_copy_1'>
             <field name='book_id' ref='jade_war' />
         </record>
     </data>
