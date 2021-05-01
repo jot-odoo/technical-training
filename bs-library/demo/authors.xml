@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record model='res.partner' id='fonda_lee'>
+            <field name='name'>Fonda Lee</field>
+        </record>
+        <record model='res.partner' id='tj_klune'>
+            <field name='name'>TJ Klune</field>
+        </record>
+        <record model='res.partner' id='brandon_sanderson'>
+            <field name='name'>Brandon Sanderson</field>
+        </record>
+        <record model='res.partner' id='ken_liu'>
+            <field name='name'>Ken Liu</field>
+        </record>
+    </data>
+</odoo>
