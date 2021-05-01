@@ -23,13 +23,14 @@
     # always loaded
     'data': [
         'security/security.xml',
-        'security/ir.model.access.csv',
+        'security/ir.model.access.csv'
+
     ],
     # only loaded in demonstration mode
-    'demo': [
+    'demo': [        
         'demo/publishers.xml',
         'demo/authors.xml',
-        'demo/books.xml',
         'demo/genres_tags.xml',
+        'demo/books.xml'
     ],
 }

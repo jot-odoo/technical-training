@@ -5,26 +5,26 @@
             <field name='title'>The Way of Kings</field>
             <field name='author_ids' eval="[(6,0,[ref('brandon_sanderson')])]" />
             <field name='publisher_id' ref='tor' />
-            <field name='publication_date'>2010</field>
+            <field name='publication_date'>2010-01-01</field>
             <field name='genre_ids' eval="[(6,0,[ref('genre_fantasy')])]" />
-            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic'])]" />
+            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic')])]" />
         </record>
         <record model='library.book' id='jade_city'>
             <field name='title'>Jade City</field>
             <field name='author_ids' eval="[(6,0,[ref('fonda_lee')])]" />
             <field name='publisher_id' ref='tor' />
-            <field name='publication_date'>2017</field>
+            <field name='publication_date'>2017-01-01</field>
             <field name='genre_ids' eval="[(6,0,[ref('genre_fantasy')])]" />
-            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic'])]" />
+            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic')])]" />
             <field name='isbn'>9780316440882</field>
         </record>
         <record model='library.book' id='jade_war'>
             <field name='title'>Jade War</field>
             <field name='author_ids' eval="[(6,0,[ref('fonda_lee')])]" />
             <field name='publisher_id' ref='tor' />
-            <field name='publication_date'>2019</field>
+            <field name='publication_date'>2019-01-01</field>
             <field name='genre_ids' eval="[(6,0,[ref('genre_fantasy')])]" />
-            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic'])]" />
+            <field name='tag_ids' eval="[(6,0,[ref('tag_action'), ref('tag_magic')])]" />
         </record>
     </data>
     <data noupdate="1">
