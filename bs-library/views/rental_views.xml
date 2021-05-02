@@ -12,7 +12,7 @@
                     <field name="book_id" />
                     <field name="start_date" />
                     <field name="due_date" />
-                    <field name="is_returned" />
+                    <field name="status" />
                 </tree>
             </field>
         </record>
@@ -22,17 +22,20 @@
             <field name="model">library.rental</field>
             <field name="arch" type="xml">
                 <form string="">
+                    <header>
+                        <field name="status" widget="statusbar" clickable="1" />
+                    </header>
                     <sheet>
                         <group>
                             <group>
                                 <field name="customer_id" />
-                                <field name="book_id" options="{'no_create':True,'no_create_edit':True, 'no_open':True}" domain="[('is_available','=',True)]" />
+                                <field name="book_id" options="{'no_create':True,'no_create_edit':True, 'no_open':True}" domain="[('status','=','circulation')]" />
                             </group>
                             <group>
                                 <field name="start_date" />
                                 <field name="duration" />
                                 <field name="due_date" />
-                                <field name="is_returned" />
+                                <field name="return_date" force_save="1" />
                             </group>
                         </group>
                     </sheet>
@@ -55,7 +58,8 @@
             <field name="name">library.rental.view.gantt</field>
             <field name="model">library.rental</field>
             <field name="arch" type="xml">
-                <gantt string="Gantt" date_start="start_date" date_stop="due_date" default_group_by="customer_id" />
+                <!-- TODO: [FIX] Get custom color working -->
+                <gantt string="Gantt" date_start="start_date" date_stop="gantt_date_end" default_group_by="customer_id" color="gantt_color" />
             </field>
         </record>
     </data>

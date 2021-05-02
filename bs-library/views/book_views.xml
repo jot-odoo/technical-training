@@ -49,7 +49,7 @@
                                 <field name="copy_ids">
                                     <tree>
                                         <field name="serial_number" />
-                                        <field name="is_available" />
+                                        <field name="status" />
                                     </tree>
                                 </field>
                             </page>

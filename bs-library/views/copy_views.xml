@@ -6,12 +6,12 @@
             <field name="name">library.copy.view.tree</field>
             <field name="model">library.copy</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree multi_edit="1">
                     <!-- Add your fields here -->
                     <field name="book_id" />
                     <field name="serial_number" />
                     <field name="location" />
-                    <field name="is_available" />
+                    <field name="status" />
                 </tree>
             </field>
         </record>
@@ -21,6 +21,9 @@
             <field name="model">library.copy</field>
             <field name="arch" type="xml">
                 <form string="">
+                    <header>
+                        <field name="status" widget="statusbar" />
+                    </header>
                     <sheet>
                         <group>
                             <group>

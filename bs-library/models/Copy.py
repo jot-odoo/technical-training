@@ -23,17 +23,20 @@ class Copy(models.Model):
         index=True,
         readonly=True)
 
+    # TODO: make Location model and make this a many2one
     location = fields.Char(string='Location')
 
-    is_available = fields.Boolean(string='Is Available',
-                                  compute='_compute_availability',
-                                  store=True)
+    status = fields.Selection(string='Status',
+                              selection=[('circulation', 'In Circulation'),
+                                         ('on_hold', 'On Hold'),
+                                         ('checked_out', 'Checked Out'),
+                                         ('archived', 'Archived')],
+                              default='circulation')
 
-    @api.depends('rental_ids.is_returned')
-    def _compute_availability(self):
+    @api.constrains('rental_ids.status, status')
+    def _constrain_status(self):
         for record in self:
             for rental in record.rental_ids:
-                if (not rental.is_returned):
-                    record.is_available = False
-                    return
-            record.is_available = True
+                if (rental.status in ['on_hold', 'checked_out', 'overdue']
+                        and record.status not in ['checked_out', 'on_hold']):
+                    return False
